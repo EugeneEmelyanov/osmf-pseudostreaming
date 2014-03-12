@@ -1,7 +1,8 @@
 osmf-pseudostreaming
 ====================
 
-Open Source Media Framework Pseudostreaming Plugin
+Fork of Open Source Media Framework Pseudostreaming Plugin with bug fixes and improvements. Tested with Akamai progressive media.
+Works with both: flv and mp4 files.
 
 #Quickstart
 
@@ -37,7 +38,7 @@ Here is the sample Flex application that uses Spark VideoPlayer and this plugin 
             var resource:MediaResourceBase = new StreamingURLResource(VIDEO_URL);
 
             // 4. adding the query string as a metadata
-            resource.addMetadataValue("pseudostreaming_query", "?start={time}");
+            resource.addMetadataValue("pseudostreaming_query", "?aktimeoffset={time}");
 
             // 5. creating an element
             videoPlayer.source = factory.createMediaElement(resource);
